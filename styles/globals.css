@@ -6,4 +6,16 @@
   html {
     font-family: 'Ubuntu', sans-serif;
     scroll-behavior: smooth;}
+    
 }
+div {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+}
+
+div:nth-child(2n) {
+  background: black;
+}
+
+
