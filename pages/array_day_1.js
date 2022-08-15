@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-export default function Array() {
+export default function ArrayDayOne() {
   // array.push()
   // Добавляет эл-нт в конец массива
 
