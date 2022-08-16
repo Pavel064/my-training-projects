@@ -222,22 +222,23 @@ function ArrayDayTwo() {
   // const start = 'a'.charCodeAt()
   // const end = 'z'.charCodeAt()
 
-  // function shuffle(arr) {
-  //   // делает перепутанный порядок алфавита
-  //   let currentIndex = arr.length,
+  // Array.prototype.shuffle = function () {
+  //   let currentIndex = this.length,
   //     randomIndex
 
   //   while (currentIndex != 0) {
   //     randomIndex = Math.floor(Math.random() * currentIndex)
   //     currentIndex--
-  //     ;[arr[currentIndex], arr[randomIndex]] = [arr[randomIndex], arr[currentIndex]]
+  //     ;[this[currentIndex], this[randomIndex]] = [this[randomIndex], this[currentIndex]]
   //   }
 
-  //   return arr
+  //   return this
   // }
   // const letters = new Array(end - start + 1)
   //   .fill('')
   //   .map((_, index) => String.fromCharCode(start + index))
+  //   .shuffle()
+  //   .sort()
 
   // console.log(letters) // выводит алфавит
   // console.log(shuffle(letters)) // выводит алфавит
@@ -250,6 +251,8 @@ function ArrayDayTwo() {
   // console.log(numbers) // Array(20) [ 18, 6, 20, 5, 1, 4, 9, 7, 10, 15, … ]
   // console.log(numbers.sort((a, b) => a - b)) // Array(20) [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, … ]
   // console.log(numbers.sort((a, b) => b - a)) // Array(20) [ 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, … ]
+
+  // console.log([1, 2, 3, 4, 5, 6, 7, 8, 9].shuffle()) // Array(9) [ 4, 2, 1, 3, 8, 6, 7, 9, 5 ]
 
   //
   //
@@ -271,9 +274,36 @@ function ArrayDayTwo() {
 
   // console.log(result) // 28
 
-  const result = array.reduce((acc, item) => acc * item, 1)
+  // const result = array.reduce((acc, item) => acc * item, 1)
+  // console.log(result) // 5040
 
-  console.log(result) // 5040
+  // const result2 = array.reduce((acc, item) => {
+  //   acc.push(item * item)
+  //   return acc
+  // }, [])
+
+  // console.log(result2) // Array(7) [ 1, 4, 9, 16, 25, 36, 49 ]
+
+  // const cart = [
+  //   { title: 'Apple', price: 49 },
+  //   { title: 'banana', price: 149 },
+  // ]
+
+  // const total = cart.reduce((sum, item) => {
+  //   return sum + item.price
+  // }, 0)
+  // console.log(total) // 198
+
+  //
+  //
+  //
+  //
+  // array.flat()
+  // возвращает новый массив, в котором все элементы вложенных подмассивов были рекурсивно "подняты" на указанный уровень depth.
+
+  // const array2 = [1, 2, 3, [4], [[5], [6]], [[[[[7]]]]]]
+
+  // console.log(array2.flat(Infinity))
 }
 
 export default ArrayDayTwo
